@@ -234,7 +234,7 @@ class ChunkBLAFunction(torch.autograd.Function):
         # print("o==============================", o)
         # print("Aw==============================", Aw)
         # print("Au==============================", Au)
-        ctx.save_for_backward(q_orig, k_orig, v, g, beta, Aw, Au, initial_state, offsets, indices)
+        ctx.save_for_backward(q_orig, k_orig, v_orig, g, beta, Aw, Au, initial_state, offsets, indices)
         ctx.chunk_size = chunk_size
         ctx.scale = scale
         ctx.head_first = head_first
